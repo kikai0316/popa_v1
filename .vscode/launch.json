@@ -1,26 +1,29 @@
+
 {
-    // IntelliSense を使用して利用可能な属性を学べます。
-    // 既存の属性の説明をホバーして表示します。
-    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Debug dev",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "debug",
-        },
-        {
-            "name": "popa_v1 (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "debug",
-        },
-        {
-            "name": "popa_v1 (release mode)",
-            "request": "launch",
-            "type": "dart",
-             "flutterMode": "debug",
-        }
+      {
+        "name": "Debug dev",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "debug",
+        "args": ["--dart-define-from-file=dart_defines/dev.json"]
+      },
+      {
+          "name": "Debug stg",
+          "request": "launch",
+          "type": "dart",
+          "flutterMode": "debug",
+          "args": [
+              "--dart-define-from-file=dart_defines/stg.json"
+          ]
+      },
+      {
+        "name": "Debug prod",
+        "request": "launch",
+        "type": "dart",
+        "flutterMode": "debug",
+        "args": ["--dart-define-from-file=dart_defines/prod.json"]
+      }
     ]
-}
+  }
